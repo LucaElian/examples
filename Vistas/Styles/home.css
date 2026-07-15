@@ -1,0 +1,510 @@
+﻿/*===============================*/
+/*         INICIO ADMIN          */
+/*===============================*/
+
+.stat-card {
+    min-height: 92px;
+    background-color: var(--color-fondo-card);
+    border: 1px solid var(--color-borde-suave);
+    border-radius: 18px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    box-shadow: 0 12px 30px var(--sombra-sidebar);
+}
+
+.stat-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 16px;
+    background-color: var(--color-menta-claro);
+    color: var(--color-verde-principal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+    .stat-icon.paciente {
+        background-color: var(--color-paciente-fondo);
+        color: var(--color-paciente-texto);
+    }
+
+    .stat-icon.medico {
+        background-color: var(--color-medico-fondo);
+        color: var(--color-medico-texto);
+    }
+
+    .stat-icon.warning {
+        background-color: var(--color-warning-fondo);
+        color: var(--color-warning-texto);
+    }
+
+    .stat-icon.turno-hoy {
+        background-color: var(--color-turno-hoy-fondo);
+        color: var(--color-turno-hoy-texto);
+    }
+
+.stat-label {
+    display: block;
+    color: var(--color-texto-secundario);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.stat-number {
+    display: block;
+    color: var(--color-verde-oscuro);
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.especialidades-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 22px;
+}
+
+.especialidad-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.especialidad-nombre {
+    color: var(--color-verde-texto);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.especialidad-cantidad {
+    color: var(--color-texto-secundario);
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.especialidad-progress {
+    height: 21px;
+    background-color: var(--color-menta-claro);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+    .especialidad-progress .progress-bar {
+        background-color: var(--color-verde-principal);
+        font-weight: 700;
+        font-size: 12px;
+    }
+
+.asistencia-panel {
+    margin-top: auto;
+}
+
+.resumen-stat {
+    background-color: var(--color-menta-claro);
+    border: 1px solid var(--color-borde-suave);
+    border-radius: 16px;
+    padding: 14px;
+    text-align: center;
+}
+
+    .resumen-stat span {
+        display: block;
+    }
+
+    .resumen-stat .resumen-stat-label {
+        color: var(--color-texto-secundario);
+        font-weight: 600;
+        margin-bottom: 4px;
+        font-size: 14px;
+    }
+
+    .resumen-stat .resumen-stat-number {
+        color: var(--color-verde-oscuro);
+        font-size: 27px;
+        font-weight: 700;
+    }
+
+
+/*===============================*/
+/*         INICIO MÉDICO         */
+/*===============================*/
+
+.search-panel {
+    background-color: var(--color-fondo-card);
+    border: 1px solid var(--color-borde-suave);
+    border-radius: 18px;
+    padding: 14px;
+    margin-bottom: 14px;
+    box-shadow: 0 10px 28px var(--sombra-sidebar);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-box {
+    flex: 1;
+}
+
+.search-input {
+    height: 43px;
+}
+
+.btn-search {
+    width: 46px;
+    height: 43px;
+    border-radius: 12px;
+    background-color: var(--color-verde-principal);
+    border-color: var(--color-verde-principal);
+    color: var(--color-blanco);
+    font-size: 18px;
+}
+
+    .btn-search:hover {
+        background-color: var(--color-verde-hover);
+        border-color: var(--color-verde-hover);
+        color: var(--color-blanco);
+    }
+
+.medico-search-panel {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+    padding: 18px 20px;
+}
+
+.medico-search-title {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+    .medico-search-title .panel-title {
+        margin-bottom: 0;
+    }
+
+    .medico-search-title .panel-subtitle {
+        margin-bottom: 0;
+    }
+
+.medico-search-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.medico-search-input {
+    flex: 1;
+}
+
+.turnos-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.turnos-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px 22px;
+    align-content: start;
+    overflow: hidden;
+}
+
+.turno-card {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    border-radius: 12px;
+    padding: 14px 16px;
+    min-height: 190px;
+    box-shadow: 0 10px 24px var(--sombra-sidebar);
+    display: flex;
+    flex-direction: column;
+}
+
+.turno-card-header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.turno-title {
+    color: var(--color-verde-oscuro);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.turno-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 12px;
+}
+
+.turno-info {
+    display: flex;
+    align-items: center;
+    color: var(--color-verde-texto);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+    .turno-info i {
+        color: var(--color-verde-principal);
+        margin-right: 6px;
+        font-size: 15px;
+    }
+
+.btn-revisar-turno {
+    width: fit-content;
+    align-self: center;
+    margin-top: auto;
+    border-radius: 8px;
+    padding: 7px 14px;
+    background-color: var(--color-verde-principal);
+    border-color: var(--color-verde-principal);
+    color: var(--color-blanco);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+    .btn-revisar-turno:hover {
+        background-color: var(--color-verde-hover);
+        border-color: var(--color-verde-hover);
+        color: var(--color-blanco);
+    }
+
+.turno-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 12px;
+    padding-top: 8px;
+    border-top: 1px solid var(--color-borde-suave);
+}
+
+.turno-footer-label,
+.turno-footer-value {
+    display: block;
+}
+
+.turno-footer-label {
+    color: var(--color-texto-secundario);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.turno-footer-value {
+    color: var(--color-verde-oscuro);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.turnos-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.turnos-page {
+    min-width: 38px;
+    height: 38px;
+    padding: 7px 12px;
+    border-radius: 12px;
+    background-color: var(--color-menta-claro);
+    border: 1px solid var(--color-borde-suave);
+    color: var(--color-verde-texto);
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .turnos-page:hover {
+        background-color: var(--color-menta-hover);
+        color: var(--color-verde-oscuro);
+    }
+
+    .turnos-page.active {
+        background-color: var(--color-verde-principal);
+        border-color: var(--color-verde-principal);
+        color: var(--color-blanco);
+    }
+
+    .turnos-page.disabled {
+        opacity: 0.45;
+        pointer-events: none;
+    }
+
+    /*===============================*/
+/*     BUSCADOR INICIO MEDICO    */
+/*===============================*/
+
+.medico-search-controls {
+    display: grid !important;
+    grid-template-columns: 165px 1fr 46px 95px;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+.medico-search-controls .abml-search-select {
+    width: 100%;
+    height: 43px;
+    border-radius: 10px;
+}
+
+.medico-search-controls .medico-search-input {
+    width: 100%;
+    height: 43px;
+}
+
+.medico-search-controls .btn-search {
+    width: 46px;
+    height: 43px;
+    border-radius: 12px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.medico-btn-todos {
+    height: 43px;
+    padding: 0 16px;
+    white-space: nowrap;
+}
+
+
+/*===============================*/
+/*       MODAL REVISAR TURNO     */
+/*===============================*/
+
+.modal-revision-turno {
+    max-width: 850px;
+}
+
+.modal-revision-turno .revision-grid {
+    display: grid !important;
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+    column-gap: 16px;
+    row-gap: 16px;
+    align-items: start;
+}
+
+.modal-revision-turno .revision-field-third {
+    grid-column: span 2 !important;
+}
+
+.modal-revision-turno .revision-field-half {
+    grid-column: span 3 !important;
+}
+
+.modal-revision-turno .revision-field-full {
+    grid-column: 1 / -1 !important;
+}
+
+.modal-revision-turno .revision-readonly {
+    background-color: #eef3f0 !important;
+    color: #52665b !important;
+    border-color: #c9d8cf !important;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.modal-revision-turno .revision-readonly:hover,
+.modal-revision-turno .revision-readonly:focus {
+    background-color: #eef3f0 !important;
+    color: #52665b !important;
+    border-color: #c9d8cf !important;
+    box-shadow: none !important;
+}
+
+.modal-revision-turno textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.modal-revision-turno .abml-modal-actions {
+    margin-top: 20px !important;
+    padding-top: 14px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .medico-search-controls {
+        grid-template-columns: 1fr;
+    }
+
+    .medico-search-controls .btn-search,
+    .medico-btn-todos {
+        width: 100%;
+    }
+
+    .modal-revision-turno .revision-field-third,
+    .modal-revision-turno .revision-field-half,
+    .modal-revision-turno .revision-field-full {
+        grid-column: 1 / -1 !important;
+    }
+}
+
+
+/*===============================*/
+/*       RESPONSIVE HOME         */
+/*===============================*/
+
+@media (max-width: 1200px) {
+    .turnos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .turnos-panel {
+        overflow: visible;
+    }
+}
+
+@media (max-width: 992px) {
+    .especialidades-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .search-panel {
+        align-items: stretch;
+    }
+
+    .turnos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .turno-footer {
+        flex-direction: column;
+    }
+
+    .medico-search-panel {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .medico-search-title {
+        align-items: flex-start;
+    }
+
+    .medico-search-controls {
+        align-items: stretch;
+    }
+
+    .btn-search {
+        flex-shrink: 0;
+    }
+}

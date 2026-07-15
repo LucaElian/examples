@@ -1,0 +1,81 @@
+﻿/*===============================*/
+/*             LOGIN             */
+/*===============================*/
+
+.login-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #d9f0e3 0%, var(--color-fondo-claro) 45%, #cfeada 100%);
+}
+
+.login-card {
+    background: var(--color-fondo-card);
+    border-radius: 22px;
+    padding: 34px 32px;
+    border: 1px solid var(--color-borde-suave);
+    box-shadow: 0 18px 42px var(--sombra-card);
+}
+
+.login-logo {
+    width: 108px;
+    height: 108px;
+    margin: 0 auto 18px auto;
+    border-radius: 50%;
+    background-color: var(--color-menta-claro);
+    border: 1px solid var(--color-borde);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px;
+}
+
+.login-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.login-title {
+    display: block;
+    font-weight: 700;
+    color: var(--color-verde-oscuro);
+    margin-bottom: 0;
+    font-size: 28px;
+}
+
+/*===============================*/
+/*        BOTÓN PASSWORD         */
+/*===============================*/
+
+.btn-password {
+    border: 1px solid var(--color-borde);
+    background-color: var(--color-menta-claro);
+    color: var(--color-verde-texto);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+    .btn-password:hover {
+        background-color: var(--color-menta-hover);
+        color: var(--color-verde-oscuro);
+    }
+
+/*===============================*/
+/*          BOTÓN LOGIN          */
+/*===============================*/
+
+.btn-login {
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: 600;
+    margin-top: 8px;
+    background-color: var(--color-verde-principal);
+    border-color: var(--color-verde-principal);
+    color: var(--color-blanco);
+}
+
+    .btn-login:hover {
+        background-color: var(--color-verde-hover);
+        border-color: var(--color-verde-hover);
+        color: var(--color-blanco);
+    }

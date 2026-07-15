@@ -1,0 +1,211 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Panel.Master.cs" Inherits="Vistas.Panel" %>
+<%@ Register Src="~/Controles/ModalCrearTurno.ascx" TagPrefix="uc" TagName="ModalCrearTurno" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+    </title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link href="Styles/base.css" rel="stylesheet" />
+    <link href="Styles/home.css" rel="stylesheet" />
+    <link href="Styles/pages.css" rel="stylesheet" />
+</head>
+
+<body>
+    <form id="form1" runat="server">
+
+        <asp:Panel ID="pnlLayout" runat="server" CssClass="layout" ClientIDMode="Static">
+
+            <!-- BOTÓN PARA OCULTAR / MOSTRAR SIDEBAR -->
+            <button type="button" id="btnToggleSidebar" class="sidebar-action sidebar-toggle">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <asp:LinkButton
+                ID="lbtnInicioPanel"
+                runat="server"
+                CssClass="sidebar-action sidebar-home"
+                Text="<i class='bi bi-house-door'></i>"
+                ToolTip="Volver al inicio"
+                CausesValidation="False"
+                OnClick="lbtnInicioPanel_Click">
+            </asp:LinkButton>
+
+            <!-- SIDEBAR -->
+            <asp:Panel ID="pnlSideBar" runat="server" CssClass="sidebar">
+
+                <asp:Panel ID="pnlSideBarHeader" runat="server" CssClass="sidebar-header">
+
+                    <asp:Panel ID="pnlSidebarBrand" runat="server" CssClass="sidebar-brand">
+
+                        <asp:Image
+                            ID="imgLogo"
+                            runat="server"
+                            ImageUrl="Images/logo.svg"
+                            AlternateText="Logo"
+                            CssClass="sidebar-logo" />
+
+                        <asp:Panel ID="pnlSidebarTitle" runat="server" CssClass="sidebar-title-box">
+
+                            <asp:Label
+                                ID="lblClinica"
+                                runat="server"
+                                Text="Clínica Médica"
+                                CssClass="sidebar-title">
+                            </asp:Label>
+
+                            <asp:Label
+                                ID="lblVITALIA"
+                                runat="server"
+                                Text="VITALIA"
+                                CssClass="sidebar-subtitle">
+                            </asp:Label>
+
+                        </asp:Panel>
+
+                    </asp:Panel>
+
+                    <!-- Solo para admin -->
+                    <asp:LinkButton
+                        ID="lbtnIngresarTurno"
+                        runat="server"
+                        CssClass="sidebar-pill"
+                        Text="<i class='bi bi-plus-circle'></i> Ingresar turno"
+                        CausesValidation="False"
+                        OnClick="lbtnIngresarTurno_Click">
+                    </asp:LinkButton>
+
+                </asp:Panel>
+
+
+                <!-- MENÚ ADMIN -->
+                <asp:Panel ID="pnlMenuAdmin" runat="server" CssClass="sidebar-menu">
+
+                    <a href="Pacientes.aspx" class="sidebar-link">
+                        <i class="bi bi-people"></i>
+                        <span>Pacientes</span>
+                    </a>
+
+                    <a href="Medicos.aspx" class="sidebar-link">
+                        <i class="bi bi-person-badge"></i>
+                        <span>Médicos</span>
+                    </a>
+
+                    <a href="Cuentas.aspx" class="sidebar-link">
+                        <i class="bi bi-person-vcard"></i>
+                        <span>Cuentas</span>
+                    </a>
+
+                    <a href="Turnos.aspx" class="sidebar-link">
+                        <i class="bi bi-calendar-check"></i>
+                        <span>Turnos</span>
+                    </a>
+
+                    <a href="Informes.aspx" class="sidebar-link">
+                        <i class="bi bi-bar-chart"></i>
+                        <span>Informes</span>
+                    </a>
+
+                </asp:Panel>
+
+
+                <!-- MENÚ MÉDICO -->
+                <asp:Panel ID="pnlMenuMedico" runat="server" CssClass="sidebar-menu">
+
+                    <a href="Historial.aspx" class="sidebar-link">
+                        <i class="bi bi-clock-history"></i>
+                        <span>Historial</span>
+                    </a>
+
+                    <a href="Estadisticas.aspx" class="sidebar-link">
+                        <i class="bi bi-bar-chart"></i>
+                        <span>Estadísticas</span>
+                    </a>
+
+                </asp:Panel>
+
+
+                <!-- USUARIO LOGUEADO -->
+                <asp:Panel ID="pnlUsuarioLogueado" runat="server" CssClass="sidebar-user">
+
+                    <asp:Panel ID="pnlIconoUsuario" runat="server" CssClass="sidebar-user-icon">
+                        <i class="bi bi-person-circle"></i>
+                    </asp:Panel>
+
+                    <asp:Panel ID="pnlDatosUsuario" runat="server">
+                    
+                        <asp:Label 
+                            ID="lblNombreUsuario" 
+                            runat="server" 
+                            Text="USUARIO" 
+                            CssClass="sidebar-user-name">
+                        </asp:Label>
+
+                        <asp:Label 
+                            ID="lblRolUsuario" 
+                            runat="server" 
+                            Text="ROL" 
+                            CssClass="sidebar-user-role">
+                        </asp:Label>
+
+                        <asp:LinkButton
+                            ID="lbtnCerrarSesion"
+                            runat="server"
+                            CssClass="sidebar-logout"
+                            Text="<i class='bi bi-box-arrow-right'></i> Cerrar sesión"
+                            CausesValidation="false"
+                            OnClick="lbtnCerrarSesion_Click">
+                        </asp:LinkButton>
+                    
+                    </asp:Panel>
+
+                </asp:Panel>
+
+            </asp:Panel>
+
+
+            <!-- CONTENIDO DE CADA PÁGINA -->
+            <asp:Panel ID="pnlContenido" runat="server" CssClass="content">
+
+                <!-- FECHA GLOBAL DEL PANEL -->
+                <asp:Panel ID="pnlMasterTopbar" runat="server" CssClass="master-topbar">
+
+                    <asp:Panel ID="pnlFechaMaster" runat="server" CssClass="fecha-badge master-date">
+                        <i class="bi bi-calendar3"></i>
+                        <asp:Label ID="lblFechaMaster" runat="server" Text=""></asp:Label>
+                    </asp:Panel>
+
+                </asp:Panel>
+
+                <!-- ACÁ ENTRA CADA PÁGINA -->
+                <asp:Panel ID="pnlMainContent" runat="server" CssClass="content-main">
+
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+
+                </asp:Panel>
+
+            </asp:Panel>
+
+        </asp:Panel>
+
+        <uc:ModalCrearTurno ID="ucModalCrearTurno" runat="server" />
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        <script src='<%= ResolveUrl("~/Scripts/functions.js") %>'></script>
+
+    </form>
+</body>
+</html>

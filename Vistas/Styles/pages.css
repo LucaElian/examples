@@ -1,0 +1,617 @@
+﻿/*===============================*/
+/*        ABML REUTILIZABLE      */
+/*===============================*/
+.abml-container {
+    max-width: 1280px;
+    gap: 14px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.abml-list-panel {
+    flex-shrink: 0;
+}
+
+.abml-toolbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.abml-search-area {
+    position: relative;
+    width: min(520px, 100%);
+}
+
+.abml-search-input {
+    height: 44px;
+    border-radius: 24px;
+    padding-right: 48px;
+}
+
+.abml-search-icon {
+    position: absolute;
+    top: 50%;
+    right: 9px;
+    transform: translateY(-50%);
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: var(--color-verde-principal);
+    color: var(--color-blanco);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+    .abml-search-icon:hover {
+        background-color: var(--color-verde-hover);
+        color: var(--color-blanco);
+    }
+
+.abml-toolbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.abml-list-message {
+    margin-bottom: 14px;
+    padding: 10px 13px;
+    border-radius: 12px;
+    background-color: var(--color-menta-claro);
+    border: 1px solid var(--color-borde-suave);
+    color: var(--color-verde-texto);
+    font-weight: 600;
+}
+
+.abml-table-wrapper {
+    border-radius: 14px;
+    border: 1px solid var(--color-borde-suave);
+    overflow: auto;
+}
+
+.abml-table {
+    margin-bottom: 0;
+    min-width: 1050px;
+    background-color: var(--color-blanco);
+}
+
+    .abml-table th {
+        background-color: var(--color-menta-claro);
+        color: var(--color-verde-oscuro);
+        font-size: 13px;
+        font-weight: 800;
+        border-bottom: 1px solid var(--color-borde-suave);
+        padding: 12px 10px;
+        white-space: nowrap;
+    }
+
+    .abml-table td {
+        color: var(--color-verde-texto);
+        font-size: 13px;
+        font-weight: 600;
+        vertical-align: middle;
+        border-bottom: 1px solid var(--color-borde-suave);
+        padding: 11px 10px;
+        white-space: nowrap;
+        text-align: center;
+    }
+
+    .abml-table tr:hover td {
+        background-color: var(--color-menta-suave);
+    }
+
+    .abml-table th,
+    .abml-table td {
+        border-right: 1px solid var(--color-borde-suave) !important;
+    }
+
+        .abml-table th:last-child,
+        .abml-table td:last-child {
+            border-right: none !important;
+        }
+
+    .abml-table th {
+        text-align: center !important;
+        vertical-align: middle !important;
+    }
+
+    .abml-table td:last-child {
+        text-align: center !important;
+    }
+
+.grid-actions {
+    justify-content: center;
+}
+
+.grid-action-btn.action-schedule {
+    background-color: #dbeafe;
+    color: #2563eb;
+    border: 1px solid #bfdbfe;
+}
+
+    .grid-action-btn.action-schedule:hover {
+        background-color: #bfdbfe;
+        color: #1d4ed8;
+    }
+
+    .grid-action-btn.action-schedule i {
+        color: inherit;
+    }
+
+.badge-status {
+    min-width: 72px;
+    border: none;
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 800;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+    .badge-status:hover {
+        opacity: 0.85;
+        text-decoration: none;
+    }
+
+    .badge-status.active {
+        background-color: #dff3ea;
+        color: #2b7a58;
+        border: 1px solid #9fd8bf;
+    }
+
+    .badge-status.inactive {
+        background-color: #f3d9d9;
+        color: #7a2e2e;
+        border: 1px solid #e5b8b8;
+    }
+
+.abml-pager td {
+    background-color: var(--color-fondo-card) !important;
+    padding: 14px !important;
+}
+
+.abml-pager table {
+    margin: 0 auto;
+}
+
+.abml-pager a,
+.abml-pager span {
+    min-width: 36px;
+    height: 36px;
+    padding: 7px 11px;
+    margin: 0 3px;
+    border-radius: 10px;
+    border: 1px solid var(--color-borde-suave);
+    background-color: var(--color-menta-claro);
+    color: var(--color-verde-texto);
+    text-decoration: none;
+    font-weight: 800;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.abml-pager span {
+    background-color: var(--color-verde-principal);
+    border-color: var(--color-verde-principal);
+    color: var(--color-blanco);
+}
+
+.abml-list-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 18px;
+}
+
+.abml-search-area {
+    position: relative;
+    width: min(620px, 100%);
+    display: flex;
+    gap: 8px;
+}
+
+.abml-search-select {
+    width: 145px;
+    height: 44px;
+    border-radius: 24px;
+    font-weight: 700;
+}
+
+.abml-search-input {
+    height: 44px;
+    border-radius: 24px;
+    padding-right: 48px;
+}
+
+/*===============================*/
+/*          ABML MODAL           */
+/*===============================*/
+
+.abml-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    background-color: rgba(16, 61, 47, 0.38);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+
+.abml-modal {
+    width: min(920px, calc(100vw - 48px));
+    max-height: calc(100vh - 64px);
+    overflow-y: auto;
+    background-color: var(--color-fondo-card);
+    border: 1px solid var(--color-borde-suave);
+    border-radius: 22px;
+    padding: 24px;
+    box-shadow: 0 24px 60px rgba(16, 61, 47, 0.30);
+}
+
+.abml-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.abml-modal-title {
+    display: block;
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--color-verde-oscuro);
+}
+
+.abml-modal-subtitle {
+    display: block;
+    margin-top: 2px;
+    font-size: 14px;
+    color: var(--color-texto-secundario);
+}
+
+.abml-modal-close {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    border: 1px solid var(--color-borde-suave);
+    background-color: var(--color-menta-claro);
+    color: var(--color-verde-texto);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+    .abml-modal-close:hover {
+        background-color: var(--color-error-fondo);
+        color: var(--color-error-texto);
+    }
+
+
+
+.horarios-modal {
+    width: min(720px, calc(100vw - 40px));
+    padding: 20px;
+}
+
+    .horarios-modal .abml-modal-header {
+        margin-bottom: 14px;
+    }
+
+    .horarios-modal .abml-modal-title {
+        font-size: 19px;
+    }
+
+    .horarios-modal .abml-modal-subtitle {
+        font-size: 13px;
+    }
+
+    .horarios-modal .abml-form-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px 12px;
+    }
+
+    .horarios-modal .form-label {
+        font-size: 12px;
+        margin-bottom: 2px;
+    }
+
+    .horarios-modal .form-control {
+        height: 36px;
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .horarios-modal .abml-form-actions {
+        margin-top: 12px;
+    }
+
+    .horarios-modal .btn {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+
+.horarios-table {
+    min-width: 0 !important;
+    width: 100%;
+    table-layout: fixed;
+}
+
+    .horarios-table th,
+    .horarios-table td {
+        font-size: 12px;
+        padding: 9px 8px;
+    }
+
+        .horarios-table th:last-child,
+        .horarios-table td:last-child {
+            width: 90px;
+        }
+
+.horarios-modal .text-danger {
+    font-size: 12px;
+    line-height: 1.15;
+    margin-top: 3px;
+    font-weight: 700;
+}
+
+.horarios-modal .form-field {
+    gap: 4px;
+}
+
+.horarios-modal .abml-form-grid {
+    gap: 8px 14px;
+}
+
+.hora-select-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.hora-select {
+    width: 80px;
+}
+
+.minuto-select {
+    width: 80px;
+}
+
+.hora-separador {
+    font-weight: 800;
+    color: var(--color-verde-oscuro);
+}
+
+/*===============================*/
+/*        FORMULARIO ABML        */
+/*===============================*/
+
+.abml-form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px 16px;
+}
+
+.paciente-form-grid {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.paciente-field-third {
+    grid-column: span 2;
+}
+
+.paciente-field-half {
+    grid-column: span 3;
+}
+
+.paciente-field-full {
+    grid-column: span 6;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-field-wide {
+    grid-column: span 3;
+}
+
+.abml-form-grid select.form-control,
+.abml-search-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    padding-right: 42px;
+    background-color: var(--color-blanco);
+    background-image: linear-gradient(45deg, transparent 50%, var(--color-verde-texto) 50%), linear-gradient(135deg, var(--color-verde-texto) 50%, transparent 50%);
+    background-position: calc(100% - 18px) 50%, calc(100% - 13px) 50%;
+    background-size: 6px 6px, 6px 6px;
+    background-repeat: no-repeat;
+}
+
+    .abml-form-grid select.form-control:hover,
+    .abml-search-select:hover {
+        border-color: var(--color-verde-principal);
+        background-color: var(--color-menta-claro);
+    }
+
+    .abml-form-grid select.form-control:focus,
+    .abml-search-select:focus {
+        border-color: var(--color-verde-principal);
+        box-shadow: 0 0 0 0.18rem rgba(46, 125, 93, 0.18);
+    }
+
+    .abml-form-grid select.form-control:disabled {
+        cursor: not-allowed;
+        background-color: #e9eeee;
+        color: #6b7d76;
+        opacity: 1;
+    }
+
+.abml-message {
+    margin-top: 14px;
+    padding: 10px 13px;
+    border-radius: 12px;
+    background-color: var(--color-menta-claro);
+    border: 1px solid var(--color-borde-suave);
+    color: var(--color-verde-texto);
+    font-weight: 600;
+}
+
+.abml-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/*===============================*/
+/*            INFORMES           */
+/*===============================*/
+
+.informes-panel {
+    max-width: 1280px;
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.informes-header {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.informes-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.informe-card-modern {
+    min-height: 120px;
+    background-color: var(--color-fondo-card);
+    border: 1px solid var(--color-borde-suave);
+    border-radius: 18px;
+    box-shadow: 0 10px 24px var(--sombra-sidebar);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 22px 20px;
+    text-align: center;
+}
+
+.informe-title {
+    display: block;
+    color: var(--color-verde-texto);
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.informe-value {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 220px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background-color: var(--color-menta-claro);
+    border: 1px solid var(--color-borde-suave);
+    color: var(--color-verde-oscuro);
+    font-size: 19px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.informe-card-placeholder {
+    min-height: 145px;
+    justify-content: center;
+}
+
+.informe-placeholder {
+    display: block;
+    color: var(--color-texto-secundario);
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/*===============================*/
+/*       RESPONSIVE PAGES        */
+/*===============================*/
+
+@media (max-width: 1200px) {
+    .abml-form-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form-field-wide {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .abml-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .abml-search-area {
+        width: 100%;
+    }
+
+    .abml-toolbar-actions {
+        width: 100%;
+    }
+
+        .abml-toolbar-actions .btn {
+            width: 100%;
+        }
+
+    .abml-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .paciente-field-third,
+    .paciente-field-half,
+    .paciente-field-full {
+        grid-column: span 6;
+    }
+
+    .form-field-wide {
+        grid-column: span 1;
+    }
+
+    .abml-form-actions {
+        justify-content: stretch;
+    }
+
+        .abml-form-actions .btn {
+            width: 100%;
+        }
+
+    .abml-modal {
+        width: 100%;
+        max-height: calc(100vh - 40px);
+        padding: 20px;
+    }
+}

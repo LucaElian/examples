@@ -1,0 +1,11 @@
+C:\Users\lucae\Documents\GUIAS .NET\TRABAJOS PRACTICOS\TrabajoPracticoIntegrador\Negocio\bin\Debug\Negocio.dll
+C:\Users\lucae\Documents\GUIAS .NET\TRABAJOS PRACTICOS\TrabajoPracticoIntegrador\Negocio\bin\Debug\Negocio.pdb
+C:\Users\lucae\Documents\GUIAS .NET\TRABAJOS PRACTICOS\TrabajoPracticoIntegrador\Negocio\bin\Debug\Datos.dll
+C:\Users\lucae\Documents\GUIAS .NET\TRABAJOS PRACTICOS\TrabajoPracticoIntegrador\Negocio\bin\Debug\Entidades.dll
+C:\Users\lucae\Documents\GUIAS .NET\TRABAJOS PRACTICOS\TrabajoPracticoIntegrador\Negocio\bin\Debug\Datos.pdb
+C:\Users\lucae\Documents\GUIAS .NET\TRABAJOS PRACTICOS\TrabajoPracticoIntegrador\Negocio\bin\Debug\Entidades.pdb
+C:\Users\lucae\Documents\GUIAS .NET\TRABAJOS PRACTICOS\TrabajoPracticoIntegrador\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\lucae\Documents\GUIAS .NET\TRABAJOS PRACTICOS\TrabajoPracticoIntegrador\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\lucae\Documents\GUIAS .NET\TRABAJOS PRACTICOS\TrabajoPracticoIntegrador\Negocio\obj\Debug\Negocio.csproj.Up2Date
+C:\Users\lucae\Documents\GUIAS .NET\TRABAJOS PRACTICOS\TrabajoPracticoIntegrador\Negocio\obj\Debug\Negocio.dll
+C:\Users\lucae\Documents\GUIAS .NET\TRABAJOS PRACTICOS\TrabajoPracticoIntegrador\Negocio\obj\Debug\Negocio.pdb

@@ -1,0 +1,6 @@
+C:\Users\lucae\Documents\GUIAS .NET\TRABAJOS PRACTICOS\TrabajoPracticoIntegrador\Entidades\bin\Debug\Entidades.dll
+C:\Users\lucae\Documents\GUIAS .NET\TRABAJOS PRACTICOS\TrabajoPracticoIntegrador\Entidades\bin\Debug\Entidades.pdb
+C:\Users\lucae\Documents\GUIAS .NET\TRABAJOS PRACTICOS\TrabajoPracticoIntegrador\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\lucae\Documents\GUIAS .NET\TRABAJOS PRACTICOS\TrabajoPracticoIntegrador\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\lucae\Documents\GUIAS .NET\TRABAJOS PRACTICOS\TrabajoPracticoIntegrador\Entidades\obj\Debug\Entidades.dll
+C:\Users\lucae\Documents\GUIAS .NET\TRABAJOS PRACTICOS\TrabajoPracticoIntegrador\Entidades\obj\Debug\Entidades.pdb
