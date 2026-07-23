@@ -7,3 +7,12 @@ C:\Users\lucae\Documents\GUIAS .NET\TRABAJOS PRACTICOS\TrabajoPracticoIntegrador
 C:\Users\lucae\Documents\GUIAS .NET\TRABAJOS PRACTICOS\TrabajoPracticoIntegrador\Datos\obj\Debug\Datos.csproj.Up2Date
 C:\Users\lucae\Documents\GUIAS .NET\TRABAJOS PRACTICOS\TrabajoPracticoIntegrador\Datos\obj\Debug\Datos.dll
 C:\Users\lucae\Documents\GUIAS .NET\TRABAJOS PRACTICOS\TrabajoPracticoIntegrador\Datos\obj\Debug\Datos.pdb
+C:\Users\lucae\Documents\GUIAS .NET\TRABAJOS PRACTICOS\TPINT_GRUPO_6_PR3\Datos\bin\Debug\Datos.dll
+C:\Users\lucae\Documents\GUIAS .NET\TRABAJOS PRACTICOS\TPINT_GRUPO_6_PR3\Datos\bin\Debug\Datos.pdb
+C:\Users\lucae\Documents\GUIAS .NET\TRABAJOS PRACTICOS\TPINT_GRUPO_6_PR3\Datos\bin\Debug\Entidades.dll
+C:\Users\lucae\Documents\GUIAS .NET\TRABAJOS PRACTICOS\TPINT_GRUPO_6_PR3\Datos\bin\Debug\Entidades.pdb
+C:\Users\lucae\Documents\GUIAS .NET\TRABAJOS PRACTICOS\TPINT_GRUPO_6_PR3\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
+C:\Users\lucae\Documents\GUIAS .NET\TRABAJOS PRACTICOS\TPINT_GRUPO_6_PR3\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\lucae\Documents\GUIAS .NET\TRABAJOS PRACTICOS\TPINT_GRUPO_6_PR3\Datos\obj\Debug\Datos.csproj.Up2Date
+C:\Users\lucae\Documents\GUIAS .NET\TRABAJOS PRACTICOS\TPINT_GRUPO_6_PR3\Datos\obj\Debug\Datos.dll
+C:\Users\lucae\Documents\GUIAS .NET\TRABAJOS PRACTICOS\TPINT_GRUPO_6_PR3\Datos\obj\Debug\Datos.pdb
