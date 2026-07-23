@@ -1,4 +1,4 @@
-ï»¿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ModalCrearTurno.ascx.cs" Inherits="Vistas.Controles.ModalCrearTurno" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ModalCrearTurno.ascx.cs" Inherits="Vistas.ModalCrearTurno" %>
 
 <asp:Panel ID="pnlModalCrearTurno" runat="server" CssClass="abml-modal-overlay" Visible="False">
 
@@ -97,7 +97,7 @@
 
 
             <asp:Panel ID="pnlCampoMedico" runat="server" CssClass="form-field">
-                <asp:Label ID="lblMedico" runat="server" Text="MÃ©dico" CssClass="form-label"></asp:Label>
+                <asp:Label ID="lblMedico" runat="server" Text="Médico" CssClass="form-label"></asp:Label>
 
                 <asp:DropDownList
                     ID="ddlMedico"
@@ -107,7 +107,7 @@
                     AutoPostBack="True"
                     OnSelectedIndexChanged="ddlMedico_SelectedIndexChanged">
                     <asp:ListItem 
-                        Text="--Seleccione mÃ©dico--" 
+                        Text="--Seleccione médico--" 
                         Value="">
                     </asp:ListItem>
                 </asp:DropDownList>
@@ -117,7 +117,7 @@
                     runat="server"
                     ControlToValidate="ddlMedico"
                     InitialValue=""
-                    ErrorMessage="Seleccione un mÃ©dico."
+                    ErrorMessage="Seleccione un médico."
                     CssClass="text-danger"
                     Display="Dynamic"
                     ValidationGroup="GCrearTurno"
@@ -150,6 +150,19 @@
                     Font-Bold="True"
                     EnableClientScript="False">
                 </asp:RequiredFieldValidator>
+
+                <asp:CustomValidator
+                    ID="cvFechaTurno"
+                    runat="server"
+                    ControlToValidate="txtFecha"
+                    ErrorMessage="La fecha no puede ser anterior a hoy."
+                    CssClass="text-danger"
+                    Display="Dynamic"
+                    ValidationGroup="GCrearTurno"
+                    Font-Bold="True"
+                    EnableClientScript="False"
+                    OnServerValidate="cvFechaTurno_ServerValidate">
+                </asp:CustomValidator>
 
             </asp:Panel>
 

@@ -486,36 +486,6 @@ namespace Datos
     //       DATOS PARA COMBOS       // 
     //===============================//
 
-        public DataTable getPacientes()
-        {
-            consulta = @"SELECT
-                            IDPaciente,
-                            Nombre + ' ' + Apellido + ' - ' + DNI AS Paciente
-                        FROM Pacientes
-                        WHERE Estado = 1
-                        ORDER BY Apellido ASC, Nombre ASC";
-
-            return datos.ObtenerDatos(consulta);
-        }
-
-        public DataTable getMedicosPorEspecialidad(int idEspecialidad)
-        {
-            consulta = @"SELECT
-                            IDMedico,
-                            Nombre + ' ' + Apellido + ' - ' + Legajo AS Medico
-                        FROM Medicos
-                        WHERE Estado = 1 
-                        AND IDEspecialidad_Medico = @IDEspecialidad
-                        ORDER BY Legajo ASC";
-
-            SqlParameter[] parametros =
-            {
-                new SqlParameter("@IDEspecialidad", idEspecialidad)
-            };
-
-            return datos.ObtenerDatos(consulta, parametros);
-        }
-
         public DataTable getHorariosDisponibles(int idMedico, DateTime fecha, int idTurnoActual)
         {
             DataTable tablaHorariosDisponibles = new DataTable();

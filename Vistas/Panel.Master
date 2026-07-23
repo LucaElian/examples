@@ -1,5 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Panel.Master.cs" Inherits="Vistas.Panel" %>
-<%@ Register Src="~/Controles/ModalCrearTurno.ascx" TagPrefix="uc" TagName="ModalCrearTurno" %>
+<%@ Register Src="~/Admin Visual/ModalCrearTurno.ascx" TagPrefix="uc" TagName="ModalCrearTurno" %>
 
 <!DOCTYPE html>
 

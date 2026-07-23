@@ -212,6 +212,23 @@ namespace Datos
 
 
     //===============================// 
+    //       DATOS PARA COMBOS       // 
+    //===============================//
+
+        public DataTable getPacientesActivos()
+        {
+            consulta = @"SELECT
+                            IDPaciente,
+                            Nombre + ' ' + Apellido + ' - ' + DNI AS Paciente
+                        FROM Pacientes
+                        WHERE Estado = 1
+                        ORDER BY Apellido ASC, Nombre ASC";
+
+            return datos.ObtenerDatos(consulta);
+        }
+
+
+    //===============================// 
     //       VALIDAR REPETIDOS       // 
     //===============================//
 

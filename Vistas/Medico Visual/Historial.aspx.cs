@@ -5,7 +5,7 @@ using Negocio;
 
 namespace Vistas
 {
-    public partial class Historial : System.Web.UI.Page
+    public partial class Historial : PaginaMedico
     {
         NegocioTurno negocioT = new NegocioTurno();
 
@@ -86,10 +86,7 @@ namespace Vistas
 
         private int ObtenerIDMedicoLogueado()
         {
-            if (Session["IDMedico"] != null)
-                return Convert.ToInt32(Session["IDMedico"]);
-
-            return 0;
+            return IDMedicoLogueado;
         }
     }
 }

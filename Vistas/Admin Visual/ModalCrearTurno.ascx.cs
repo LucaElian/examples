@@ -5,11 +5,13 @@ using System.Web.UI.WebControls;
 using Vistas.Utilities;
 using Negocio;
 
-namespace Vistas.Controles
+namespace Vistas
 {
     public partial class ModalCrearTurno : System.Web.UI.UserControl
     {
         NegocioTurno negocioT = new NegocioTurno();
+        NegocioPaciente negocioP = new NegocioPaciente();
+        NegocioMedico negocioM = new NegocioMedico();
         NegocioExterno negocioE = new NegocioExterno();
         Tools util = new Tools();
 
@@ -43,7 +45,7 @@ namespace Vistas.Controles
         {
             util.CargarDDL(
                 ddlPaciente,
-                negocioT.getPacientes(),
+                negocioP.getPacientesActivos(),
                 "Paciente",
                 "IDPaciente",
                 "Seleccione paciente"
@@ -86,7 +88,7 @@ namespace Vistas.Controles
 
             util.CargarDDL(
                 ddlMedico,
-                negocioT.getMedicosPorEspecialidad(idEspecialidad),
+                negocioM.getMedicosActivosPorEspecialidad(idEspecialidad),
                 "Medico",
                 "IDMedico",
                 "Seleccione médico"
@@ -204,7 +206,8 @@ namespace Vistas.Controles
             if (Session["IDUsuario"] != null)
                 return Convert.ToInt32(Session["IDUsuario"]);
 
-            return 1;
+            Response.Redirect("~/Login.aspx", true);
+            return 0;
         }
 
 
@@ -221,7 +224,10 @@ namespace Vistas.Controles
                 return;
 
             int idMedico = Convert.ToInt32(ddlMedico.SelectedValue);
-            DateTime fecha = Convert.ToDateTime(txtFecha.Text);
+            DateTime fecha;
+
+            if (!DateTime.TryParse(txtFecha.Text, out fecha) || fecha.Date < DateTime.Today)
+                return;
 
             DataTable horarios = negocioT.getHorariosDisponibles(idMedico, fecha, 0);
 

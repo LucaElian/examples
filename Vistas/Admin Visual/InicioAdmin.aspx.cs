@@ -4,7 +4,7 @@ using Negocio;
 
 namespace Vistas
 {
-    public partial class InicioAdmin : System.Web.UI.Page
+    public partial class InicioAdmin : PaginaAdmin
     {
         NegocioTurno negocioT = new NegocioTurno();
         NegocioPaciente negocioP = new NegocioPaciente();

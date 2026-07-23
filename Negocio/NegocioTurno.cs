@@ -162,16 +162,6 @@ namespace Negocio
     //       DATOS PARA COMBOS       // 
     //===============================//
 
-        public DataTable getPacientes()
-        {
-            return dao.getPacientes();
-        }
-
-        public DataTable getMedicosPorEspecialidad(int idEspecialidad)
-        {
-            return dao.getMedicosPorEspecialidad(idEspecialidad);
-        }
-
         public DataTable getHorariosDisponibles(int idMedico, DateTime fecha, int idTurnoActual)
         {
             return dao.getHorariosDisponibles(idMedico, fecha, idTurnoActual);

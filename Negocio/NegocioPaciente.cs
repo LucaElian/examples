@@ -82,6 +82,16 @@ namespace Negocio
 
 
     //===============================// 
+    //       DATOS PARA COMBOS       // 
+    //===============================//
+
+        public DataTable getPacientesActivos()
+        {
+            return dao.getPacientesActivos();
+        }
+
+
+    //===============================// 
     //       VALIDAR REPETIDOS       // 
     //===============================//
 

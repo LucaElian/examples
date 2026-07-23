@@ -4,7 +4,7 @@
 
 .login-page {
     min-height: 100vh;
-    background: linear-gradient(135deg, #d9f0e3 0%, var(--color-fondo-claro) 45%, #cfeada 100%);
+    background: linear-gradient( 135deg, #d9f0e3 0%, var(--color-fondo-claro) 45%, #cfeada 100% );
 }
 
 .login-card {
@@ -43,6 +43,7 @@
     font-size: 28px;
 }
 
+
 /*===============================*/
 /*        BOTÓN PASSWORD         */
 /*===============================*/
@@ -59,6 +60,26 @@
         background-color: var(--color-menta-hover);
         color: var(--color-verde-oscuro);
     }
+
+
+/*===============================*/
+/*   OLVIDÉ MI CONTRASEÑA        */
+/*===============================*/
+
+.forgot-password-link {
+    display: inline-block;
+    color: var(--color-verde-texto);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+    .forgot-password-link:hover {
+        color: var(--color-verde-oscuro);
+        text-decoration: underline;
+    }
+
 
 /*===============================*/
 /*          BOTÓN LOGIN          */
@@ -79,3 +100,28 @@
         border-color: var(--color-verde-hover);
         color: var(--color-blanco);
     }
+
+
+/*===============================*/
+/*    RESTABLECER CONTRASEÑA     */
+/*===============================*/
+
+.login-password-modal {
+    width: min(520px, calc(100vw - 48px));
+}
+
+.login-password-grid {
+    grid-template-columns: 1fr;
+}
+
+.login-message-success {
+    background-color: var(--color-menta-claro);
+    border-color: var(--color-borde-suave);
+    color: var(--color-verde-texto);
+}
+
+.login-message-error {
+    background-color: var(--color-error-fondo);
+    border-color: #e5b8b8;
+    color: var(--color-error-texto);
+}

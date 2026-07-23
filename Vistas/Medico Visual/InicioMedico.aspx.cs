@@ -5,7 +5,7 @@ using Negocio;
 
 namespace Vistas
 {
-    public partial class InicioMedico : System.Web.UI.Page
+    public partial class InicioMedico : PaginaMedico
     {
         NegocioTurno negocioT = new NegocioTurno();
         private const int TurnosxPagina = 6;
@@ -261,10 +261,7 @@ namespace Vistas
 
         private int ObtenerIDMedicoLogueado()
         {
-            if (Session["IDMedico"] != null)
-                return Convert.ToInt32(Session["IDMedico"]);
-
-            return 0;
+            return IDMedicoLogueado;
         }
 
         private void MostrarMensajeListado(string mensaje)

@@ -69,10 +69,12 @@ namespace Vistas
             else
                 rol = lblRolUsuario.Text;
 
-            if (rol == "Medico")
+            if (rol == "Administrador")
+                Response.Redirect("~/Admin Visual/InicioAdmin.aspx");
+            else if (rol == "Medico")
                 Response.Redirect("~/Medico Visual/InicioMedico.aspx");
             else
-                Response.Redirect("~/Admin Visual/InicioAdmin.aspx");
+                Response.Redirect("~/Login.aspx");
         }
 
         protected void lbtnCerrarSesion_Click(object sender, EventArgs e)

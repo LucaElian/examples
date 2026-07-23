@@ -81,6 +81,16 @@ namespace Negocio
 
 
         //===============================// 
+        //       DATOS PARA COMBOS       // 
+        //===============================//
+
+        public DataTable getMedicosActivosPorEspecialidad(int idEspecialidad)
+        {
+            return dao.getMedicosActivosPorEspecialidad(idEspecialidad);
+        }
+
+
+        //===============================// 
         //       VALIDAR REPETIDOS       // 
         //===============================//
 

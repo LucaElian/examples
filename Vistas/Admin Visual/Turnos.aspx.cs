@@ -7,9 +7,11 @@ using Negocio;
 
 namespace Vistas
 {
-    public partial class Turnos : System.Web.UI.Page
+    public partial class Turnos : PaginaAdmin
     {
         NegocioTurno negocioT = new NegocioTurno();
+        NegocioPaciente negocioP = new NegocioPaciente();
+        NegocioMedico negocioM = new NegocioMedico();
         NegocioExterno negocioE = new NegocioExterno();
         Tools util = new Tools();
 
@@ -31,7 +33,7 @@ namespace Vistas
         {
             util.CargarDDL(
                 ddlPaciente,
-                negocioT.getPacientes(),
+                negocioP.getPacientesActivos(),
                 "Paciente",
                 "IDPaciente",
                 "Seleccione paciente"
@@ -135,7 +137,7 @@ namespace Vistas
 
             util.CargarDDL(
                 ddlMedico,
-                negocioT.getMedicosPorEspecialidad(idEspecialidad),
+                negocioM.getMedicosActivosPorEspecialidad(idEspecialidad),
                 "Medico",
                 "IDMedico",
                 "Seleccione médico"
@@ -310,7 +312,7 @@ namespace Vistas
 
             util.CargarDDL(
                 ddlMedico,
-                negocioT.getMedicosPorEspecialidad(idEspecialidad),
+                negocioM.getMedicosActivosPorEspecialidad(idEspecialidad),
                 "Medico",
                 "IDMedico",
                 "Seleccione médico"

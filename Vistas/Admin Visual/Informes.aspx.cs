@@ -3,7 +3,7 @@ using Negocio;
 
 namespace Vistas
 {
-    public partial class Informes : System.Web.UI.Page
+    public partial class Informes : PaginaAdmin
     {
         NegocioTurno negocioT = new NegocioTurno();
         

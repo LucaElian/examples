@@ -40,6 +40,21 @@ namespace Negocio
 
 
     //===============================//
+    //    REESTABLECER CONTRASEÑA    //
+    //===============================//
+
+        public bool restablecerContrasenia(string nombreUsuario, string nuevaContrasenia)
+        {
+            return dao.restablecerContrasenia(nombreUsuario.Trim(), nuevaContrasenia);
+        }
+
+        public bool existeUsuarioActivo(string nombreUsuario)
+        {
+            return dao.existeUsuarioActivo(nombreUsuario.Trim());
+        }
+
+
+    //===============================//
     //            LISTADO            // 
     //===============================//
 

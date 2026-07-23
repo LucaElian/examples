@@ -68,7 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin Visual\Cuentas.aspx" />
-    <Content Include="Controles\ModalCrearTurno.ascx" />
+    <Content Include="Admin Visual\ModalCrearTurno.ascx" />
     <Content Include="Images\logo.svg" />
     <Content Include="Admin Visual\Informes.aspx" />
     <Content Include="Admin Visual\InicioAdmin.aspx" />
@@ -108,11 +108,11 @@
     <Compile Include="Admin Visual\InicioAdmin.aspx.designer.cs">
       <DependentUpon>InicioAdmin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Controles\ModalCrearTurno.ascx.cs">
+    <Compile Include="Admin Visual\ModalCrearTurno.ascx.cs">
       <DependentUpon>ModalCrearTurno.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Controles\ModalCrearTurno.ascx.designer.cs">
+    <Compile Include="Admin Visual\ModalCrearTurno.ascx.designer.cs">
       <DependentUpon>ModalCrearTurno.ascx</DependentUpon>
     </Compile>
     <Compile Include="Medico Visual\Estadisticas.aspx.cs">
@@ -142,6 +142,9 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\PaginaProtegida.cs">
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin Visual\Medicos.aspx.cs">
       <DependentUpon>Medicos.aspx</DependentUpon>

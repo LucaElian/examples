@@ -71,22 +71,6 @@ function cargarEstadoSidebar() {
     }
 }
 
-function iniciarFunciones() {
-    const btnVerPassword = document.getElementById("btnVerPassword");
-    const btnToggleSidebar = document.getElementById("btnToggleSidebar");
-
-    if (btnVerPassword) {
-        btnVerPassword.addEventListener("click", mostrarOcultarPassword);
-    }
-
-    if (btnToggleSidebar) {
-        btnToggleSidebar.addEventListener("click", mostrarOcultarSidebar);
-        cargarEstadoSidebar();
-    }
-
-    iniciarSelect2Turnos();
-}
-
 /// SELECT2 TURNOS
 
 function iniciarSelect2Turnos() {

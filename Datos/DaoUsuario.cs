@@ -68,6 +68,46 @@ namespace Datos
 
 
     //===============================//
+    //    REESTABLECER CONTRASEÑA    //
+    //===============================//
+
+        public bool restablecerContrasenia(string nombreUsuario, string nuevaContrasenia)
+        {
+            consulta = @"UPDATE Usuarios
+                        SET Contrasenia = @NuevaContrasenia
+                        WHERE Usuario COLLATE Latin1_General_CS_AS = @Usuario
+                            AND Estado = 1";
+
+            SqlParameter[] parametros =
+            {
+                new SqlParameter("@Usuario", nombreUsuario),
+                new SqlParameter("@NuevaContrasenia", nuevaContrasenia)
+            };
+
+            int filasAfectadas = datos.EjecutarConsulta(consulta, parametros);
+
+            return filasAfectadas > 0;
+        }
+
+        public bool existeUsuarioActivo(string nombreUsuario)
+        {
+            consulta = @"SELECT COUNT(*)
+                        FROM Usuarios
+                        WHERE Usuario COLLATE Latin1_General_CS_AS = @Usuario
+                            AND Estado = 1";
+
+            SqlParameter[] parametros =
+            {
+                new SqlParameter("@Usuario", nombreUsuario)
+            };
+
+            int cantidad = Convert.ToInt32(datos.EjecutarEscalar(consulta, parametros));
+
+            return cantidad > 0;
+        }
+
+
+    //===============================//
     //            LISTADO            // 
     //===============================//
 

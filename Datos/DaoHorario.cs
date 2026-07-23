@@ -166,7 +166,8 @@ namespace Datos
 
         public int eliminarHorario(int idHorario)
         {
-            consulta = @"DELETE FROM Horarios
+            consulta = @"UPDATE Horarios
+                        SET Estado = 0
                         WHERE IDHorario = @IDHorario";
 
             SqlParameter[] parametros =

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Vistas.Controles
+namespace Vistas
 {
 
 

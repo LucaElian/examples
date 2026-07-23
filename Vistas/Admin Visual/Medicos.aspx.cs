@@ -7,7 +7,7 @@ using Negocio;
 
 namespace Vistas
 {
-    public partial class Medicos : System.Web.UI.Page
+    public partial class Medicos : PaginaAdmin
     {
         NegocioMedico negocioM = new NegocioMedico();
         NegocioExterno negocioE = new NegocioExterno();

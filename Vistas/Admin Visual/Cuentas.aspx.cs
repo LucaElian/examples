@@ -5,7 +5,7 @@ using Negocio;
 
 namespace Vistas
 {
-    public partial class Cuentas : System.Web.UI.Page
+    public partial class Cuentas : PaginaAdmin
     {
         NegocioUsuario negocioU = new NegocioUsuario();
 
