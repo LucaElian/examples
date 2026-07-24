@@ -6,9 +6,9 @@
 
 <asp:Content ID="ContentMain" ContentPlaceHolderID="MainContent" runat="server">
 
-    <asp:Panel ID="pnlDashboard" runat="server" CssClass="inicio-container">
+    <asp:Panel ID="pnlDashboard" runat="server" CssClass="inicio-container inicio-admin-container">
 
-        <asp:Panel ID="pnlTurnosEspecialidad" runat="server" CssClass="panel-card mb-3">
+        <asp:Panel ID="pnlTurnosEspecialidad" runat="server" CssClass="panel-card mb-3 admin-specialties-panel">
 
             <asp:Panel ID="pnlHeaderEspecialidades" runat="server" CssClass="panel-header compact">
 
@@ -98,9 +98,9 @@
 
         </asp:Panel>
 
-        <asp:Panel ID="pnlCards" runat="server" CssClass="row g-3 mb-3">
+        <asp:Panel ID="pnlCards" runat="server" CssClass="row g-3 mb-3 admin-stats-grid">
 
-            <asp:Panel ID="pnlColPacientes" runat="server" CssClass="col-12 col-md-6">
+            <asp:Panel ID="pnlColPacientes" runat="server" CssClass="col-12 col-md-6 col-xl-3">
                 <asp:Panel ID="pnlPacientesActivos" runat="server" CssClass="stat-card">
 
                     <asp:Panel ID="pnlIconPacientes" runat="server" CssClass="stat-icon paciente">
@@ -126,7 +126,7 @@
                 </asp:Panel>
             </asp:Panel>
 
-            <asp:Panel ID="pnlColMedicos" runat="server" CssClass="col-12 col-md-6">
+            <asp:Panel ID="pnlColMedicos" runat="server" CssClass="col-12 col-md-6 col-xl-3">
                 <asp:Panel ID="pnlMedicosActivos" runat="server" CssClass="stat-card">
 
                     <asp:Panel ID="pnlIconMedicos" runat="server" CssClass="stat-icon medico">
@@ -152,7 +152,7 @@
                 </asp:Panel>
             </asp:Panel>
 
-            <asp:Panel ID="pnColTurnosPendientes" runat="server" CssClass="col-12 col-md-6">
+            <asp:Panel ID="pnColTurnosPendientes" runat="server" CssClass="col-12 col-md-6 col-xl-3">
                 <asp:Panel ID="pnlTurnosPendientes" runat="server" CssClass="stat-card">
 
                     <asp:Panel ID="pnlIconTurnosPendientes" runat="server" CssClass="stat-icon warning">
@@ -178,7 +178,7 @@
                 </asp:Panel>
             </asp:Panel>
 
-            <asp:Panel ID="pnlColTurnosHoy" runat="server" CssClass="col-12 col-md-6">
+            <asp:Panel ID="pnlColTurnosHoy" runat="server" CssClass="col-12 col-md-6 col-xl-3">
                 <asp:Panel ID="pnlTurnosHoy" runat="server" CssClass="stat-card">
 
                     <asp:Panel ID="pnlIconTurnosHoy" runat="server" CssClass="stat-icon turno-hoy">

@@ -231,6 +231,15 @@ namespace Vistas
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvFecha;
 
         /// <summary>
+        /// cvFechaTurno control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator cvFechaTurno;
+
+        /// <summary>
         /// pnlCampoHora control.
         /// </summary>
         /// <remarks>
@@ -265,6 +274,24 @@ namespace Vistas
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvHora;
+
+        /// <summary>
+        /// pnlInfoDiasMedico control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlInfoDiasMedico;
+
+        /// <summary>
+        /// lblResumenDiasAtencion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblResumenDiasAtencion;
 
         /// <summary>
         /// pnlMensajeTurno control.

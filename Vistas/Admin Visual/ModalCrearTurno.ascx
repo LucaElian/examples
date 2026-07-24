@@ -192,6 +192,10 @@
                 </asp:RequiredFieldValidator>
             </asp:Panel>
 
+            <asp:Panel ID="pnlInfoDiasMedico" runat="server" CssClass="turno-medico-info">
+                <asp:Label ID="lblResumenDiasAtencion" runat="server" CssClass="turno-medico-info-text" Text="Seleccione un médico para ver sus días de atención."></asp:Label>
+            </asp:Panel>
+
         </asp:Panel>
 
 

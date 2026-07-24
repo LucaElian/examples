@@ -2,28 +2,72 @@
 /*         INICIO ADMIN          */
 /*===============================*/
 
+.inicio-admin-container {
+    width: calc(100% - 32px);
+    max-width: 1280px;
+    height: 100%;
+    min-height: 0;
+    margin: 0 auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 7px;
+    padding-bottom: 18px;
+    box-sizing: border-box;
+}
+
+    .inicio-admin-container > .panel-card,
+    .inicio-admin-container > .row {
+        flex-shrink: 0;
+    }
+
+    .inicio-admin-container::-webkit-scrollbar {
+        width: 7px;
+    }
+
+    .inicio-admin-container::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    .inicio-admin-container::-webkit-scrollbar-thumb {
+        background-color: var(--color-borde);
+        border-radius: 10px;
+    }
+
+        .inicio-admin-container::-webkit-scrollbar-thumb:hover {
+            background-color: var(--color-verde-principal);
+        }
+
+.admin-specialties-panel {
+    padding: 22px 24px;
+}
+
+    .admin-specialties-panel .panel-header {
+        margin-bottom: 16px;
+    }
+
 .stat-card {
-    min-height: 92px;
+    min-height: 104px;
     background-color: var(--color-fondo-card);
     border: 1px solid var(--color-borde-suave);
     border-radius: 18px;
-    padding: 18px;
+    padding: 20px;
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 15px;
     box-shadow: 0 12px 30px var(--sombra-sidebar);
 }
 
 .stat-icon {
-    width: 50px;
-    height: 50px;
+    width: 54px;
+    height: 54px;
+    min-width: 54px;
     border-radius: 16px;
     background-color: var(--color-menta-claro);
     color: var(--color-verde-principal);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
+    font-size: 25px;
 }
 
     .stat-icon.paciente {
@@ -49,45 +93,45 @@
 .stat-label {
     display: block;
     color: var(--color-texto-secundario);
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
 }
 
 .stat-number {
     display: block;
     color: var(--color-verde-oscuro);
-    font-size: 30px;
+    font-size: 32px;
     line-height: 1;
     font-weight: 700;
 }
 
 .especialidades-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px 22px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px 24px;
 }
 
 .especialidad-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
 .especialidad-nombre {
     color: var(--color-verde-texto);
     font-weight: 700;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .especialidad-cantidad {
     color: var(--color-texto-secundario);
     font-weight: 600;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .especialidad-progress {
-    height: 21px;
+    height: 23px;
     background-color: var(--color-menta-claro);
     border-radius: 12px;
     overflow: hidden;
@@ -100,14 +144,20 @@
     }
 
 .asistencia-panel {
-    margin-top: auto;
+    margin-top: 0;
+    padding: 22px 24px;
+    flex-shrink: 0;
 }
+
+    .asistencia-panel .panel-header {
+        margin-bottom: 14px;
+    }
 
 .resumen-stat {
     background-color: var(--color-menta-claro);
     border: 1px solid var(--color-borde-suave);
     border-radius: 16px;
-    padding: 14px;
+    padding: 18px 14px;
     text-align: center;
 }
 
@@ -118,13 +168,13 @@
     .resumen-stat .resumen-stat-label {
         color: var(--color-texto-secundario);
         font-weight: 600;
-        margin-bottom: 4px;
-        font-size: 14px;
+        margin-bottom: 5px;
+        font-size: 15px;
     }
 
     .resumen-stat .resumen-stat-number {
         color: var(--color-verde-oscuro);
-        font-size: 27px;
+        font-size: 30px;
         font-weight: 700;
     }
 
@@ -469,6 +519,12 @@
 
     .turnos-panel {
         overflow: visible;
+    }
+}
+
+@media (max-width: 1399px) {
+    .especialidades-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 

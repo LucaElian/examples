@@ -429,6 +429,39 @@
     grid-column: span 3;
 }
 
+/*===============================*/
+/*     HORARIOS CREAR TURNO      */
+/*===============================*/
+
+.turno-medico-info {
+    width: 100%;
+    min-height: 46px;
+    padding: 11px 13px;
+    align-self: end;
+    box-sizing: border-box;
+    background-color: #f3f5f4;
+    border: 1px solid #d5ded9;
+    border-radius: 7px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.turno-medico-info-text {
+    display: block;
+    width: 100%;
+    color: #56645e;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+    .turno-medico-info-text strong {
+        display: inline-block;
+        margin-bottom: 2px;
+        color: var(--color-verde-oscuro);
+        font-weight: 800;
+    }
+
 .abml-form-grid select.form-control,
 .abml-search-select {
     appearance: none;

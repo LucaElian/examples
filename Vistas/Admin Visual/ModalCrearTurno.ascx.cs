@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Text;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Vistas.Utilities;
@@ -12,6 +13,7 @@ namespace Vistas
         NegocioTurno negocioT = new NegocioTurno();
         NegocioPaciente negocioP = new NegocioPaciente();
         NegocioMedico negocioM = new NegocioMedico();
+        NegocioHorario negocioH = new NegocioHorario();
         NegocioExterno negocioE = new NegocioExterno();
         Tools util = new Tools();
 
@@ -73,14 +75,15 @@ namespace Vistas
 
         protected void ddlEspecialidad_SelectedIndexChanged(object sender, EventArgs e)
         {
+            RestablecerResumenDiasAtencion();
+
+            util.LimpiarDDL(ddlHoraTurno, "Seleccione horario");
+            ddlHoraTurno.Enabled = false;
+
             if (ddlEspecialidad.SelectedValue == "")
             {
                 util.LimpiarDDL(ddlMedico, "Seleccione médico");
                 ddlMedico.Enabled = false;
-
-                util.LimpiarDDL(ddlHoraTurno, "Seleccione horario");
-                ddlHoraTurno.Enabled = false;
-
                 return;
             }
 
@@ -99,13 +102,24 @@ namespace Vistas
 
         protected void ddlMedico_SelectedIndexChanged(object sender, EventArgs e)
         {
+            RestablecerResumenDiasAtencion();
+
+            util.LimpiarDDL(ddlHoraTurno, "Seleccione horario");
+            ddlHoraTurno.Enabled = false;
+
+            if (ddlMedico.SelectedValue == "")
+                return;
+
+            int idMedico = Convert.ToInt32(ddlMedico.SelectedValue);
+
+            CargarResumenDiasAtencion(idMedico);
             CargarHorariosDisponibles();
         }
 
 
-    //===============================// 
-    //       EVENTOS DE TEXTBOX      //
-    //===============================//
+        //===============================// 
+        //       EVENTOS DE TEXTBOX      //
+        //===============================//
 
         protected void txtFecha_TextChanged(object sender, EventArgs e)
         {
@@ -199,6 +213,8 @@ namespace Vistas
 
             util.LimpiarDDL(ddlHoraTurno, "Seleccione horario");
             ddlHoraTurno.Enabled = false;
+
+            RestablecerResumenDiasAtencion();
         }
 
         private int ObtenerIDUsuarioCreador()
@@ -210,10 +226,55 @@ namespace Vistas
             return 0;
         }
 
+        private void CargarResumenDiasAtencion(int idMedico)
+        {
+            DataTable tabla = negocioH.getHorariosPorMedico(idMedico);
 
-    //===============================// 
-    //        CARGA DE HORAS         //
-    //===============================//
+            StringBuilder resumen = new StringBuilder();
+            resumen.Append("<strong>Días de atención:</strong>");
+
+            bool tieneHorariosActivos = false;
+
+            foreach (DataRow fila in tabla.Rows)
+            {
+                bool estado = Convert.ToBoolean(fila["Estado"]);
+
+                if (!estado)
+                    continue;
+
+                string dia = fila["Dia"].ToString();
+                string horaInicio = fila["HoraInicioTexto"].ToString();
+                string horaFin = fila["HoraFinTexto"].ToString();
+
+                resumen.Append("<br />• ");
+                resumen.Append(Server.HtmlEncode(dia));
+                resumen.Append(" (");
+                resumen.Append(Server.HtmlEncode(horaInicio));
+                resumen.Append(" a ");
+                resumen.Append(Server.HtmlEncode(horaFin));
+                resumen.Append(" hs)");
+
+                tieneHorariosActivos = true;
+            }
+
+            if (!tieneHorariosActivos)
+            {
+                lblResumenDiasAtencion.Text = "El médico seleccionado no tiene horarios activos cargados.";
+                return;
+            }
+
+            lblResumenDiasAtencion.Text = resumen.ToString();
+        }
+
+        private void RestablecerResumenDiasAtencion()
+        {
+            lblResumenDiasAtencion.Text = "Seleccione un médico para ver sus días de atención.";
+        }
+
+
+        //===============================// 
+        //        CARGA DE HORAS         //
+        //===============================//
 
         private void CargarHorariosDisponibles()
         {
